@@ -1,7 +1,7 @@
 from flask_webpack import Webpack
 from flask import Flask, render_template
 
-from api.v1.basic import basic_route
+from api.v1.hero import hero_route
 
 
 app = Flask(__name__)
@@ -21,4 +21,4 @@ def home(section="top"):
   return render_template('app.html', section=section)
 
 # Register REST API routes
-app.register_blueprint(basic_route, url_prefix=apiRoute)
+app.register_blueprint(hero_route, url_prefix=apiRoute)

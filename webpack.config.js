@@ -1,9 +1,11 @@
 const path = require('path');
+const webpack = require('webpack');
 const ManifestRevisionPlugin = require('manifest-revision-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var node_modules = './node_modules',
     rootAssetPath = './assets',
+    assetServer = "http://localhost:8080/",
     extractSASS = new ExtractTextPlugin('[name].[chunkhash].css');
 
 module.exports = {
@@ -17,12 +19,12 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'webkit-build'),
-    publicPath: "http://localhost:8080/",
+    publicPath: assetServer,
     filename: '[name].[chunkhash].js',
     chunkFilename: '[id].[chunkhash].chunk'
   },
   resolve: {
-    extensions: ['.js', '.scss']
+    extensions: ['.jsx', '.js', '.scss']
   },
   module: {
     loaders: [

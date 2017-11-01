@@ -1,20 +1,7 @@
-html, body {
-  background: #AAA;
+h1 {
+  color: $blue;
 }
 
-.gif {
-  margin: 50px auto 0 auto;
-  text-align: center;
-
-  &.loading {
-    background: asset-url('../images/loading.gif');
-    width: 709px;
-    height: 606px;
-  }
-
-  &.lines-of-code {
-    background: asset-url('../images/lines-of-code.gif');
-    width: 400px;
-    height: 300px;
-  } 
+h2 {
+  color: $red;
 }
