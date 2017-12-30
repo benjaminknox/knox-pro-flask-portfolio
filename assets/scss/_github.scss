@@ -1,0 +1,99 @@
+#github {
+  padding-top: 72px;
+  border-bottom: 13px solid $shadow-blue;
+
+  h3, h4 {
+    color: $light-blue;
+    font-family: 'MaximumImpact';
+    font-weight: lighter;
+    letter-spacing: 1px;
+  }
+
+  h3 {
+    font-size: 2em;
+    margin-bottom: 80px;
+  }
+
+  h4 {
+    margin-top: 16px;
+    font-size: 12px;
+  }
+
+  .codeSnippetWrapper {
+    display: flex;
+    margin-bottom: 80px;
+
+    .code-snippet {
+      cursor: pointer;
+      margin: 5px;
+      border-radius: 10px;
+      overflow: hidden;
+      flex: 1;
+
+      .code {
+        border-radius: 10px;
+        overflow: hidden;
+        background: $darker-blue;
+        display: flex;
+        height: 345px;
+
+        &:hover {
+          background: darken($darker-blue, 2%);
+
+          .last-code-line {
+            background: darken($darker-blue, 2%);
+          }
+        }
+
+        .code-lines, p {
+          border-radius: 10px;
+        }
+
+        .code-lines {
+          min-width: 27px;
+          background: $code-number-bg;
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+          word-break: break-word;
+        }
+
+        .code-line,
+        .last-code-line {
+          position: relative;
+          min-height: 20px;
+          word-break: break-word;
+        }
+
+        .last-code-line {
+          background: $darker-blue;
+          line-height: 15px;
+        }
+
+        .code-line {
+          line-height: 20px;
+          .code-line-number {
+            position: absolute;
+            left: -32px;
+            top: 0;
+            width: 27px;
+            text-align: center;
+          }
+       }
+
+       p,
+       .last-code-line {
+          color: $light-blue;
+          font-family: 'Ubuntu';
+          font-size: 12px;
+          text-align: left;
+          padding: 5px;
+        }
+
+        p {
+          margin-bottom: 0;
+          max-height: 325px;
+        }
+      }
+    }
+  }
+}

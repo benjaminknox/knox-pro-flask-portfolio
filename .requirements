@@ -1,2 +1,5 @@
 Flask==0.12.2
 Flask-Webpack==0.1.0
+graphqlclient==0.2.0
+python-linkedin==4.1
+Flask-DotEnv==0.1.1

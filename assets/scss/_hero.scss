@@ -1,0 +1,39 @@
+#hero {
+  background: #FFF;
+  margin-bottom: 40px;
+
+  h1 {
+    color: $darker-blue;
+    font-weight: lighter;
+    font-family: 'Boris';
+    font-size: 3.8em;
+  }
+
+  .hero-svg {
+    width: 90%;
+    margin: 20px 0;
+  }
+
+  .arrow {
+    height: 45px;
+    transform: translateY(40px);
+
+    > svg {
+      .white-path {
+        fill: #FFF;
+      }
+      .white-path-shadow {
+        fill: $shadow-blue;
+      }
+    }
+  }
+
+  h2 {
+    color: $red;
+    font-family: 'MaximumImpact';
+    font-size: 4em;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+  }
+}

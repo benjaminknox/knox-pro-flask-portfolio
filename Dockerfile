@@ -13,4 +13,3 @@ RUN cd $HOME/app ; pip install -r .requirements ; chown -R app-user:app-user $HO
 USER app-user
 WORKDIR $HOME/app
 RUN cd $HOME/app ; npm install
-
