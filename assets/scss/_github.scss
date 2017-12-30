@@ -1,6 +1,11 @@
 #github {
   padding-top: 72px;
   border-bottom: 13px solid $shadow-blue;
+  min-height: 690px;
+
+  .loader {
+    translate: transformX(200px);
+  }
 
   h3, h4 {
     color: $light-blue;

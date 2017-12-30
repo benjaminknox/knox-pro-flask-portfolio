@@ -1,0 +1,17 @@
+@keyframes loader-spin {
+    from   {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+.loader {
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 8px $light-blue dashed;
+  width: 60px;
+  height: 60px;
+  animation-name: loader-spin;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+

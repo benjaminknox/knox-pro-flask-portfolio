@@ -1,4 +1,5 @@
 import React from 'react';
+import Loader from './loader.jsx';
 
 class Snippet extends React.Component {
   constructor(props) {
@@ -78,9 +79,15 @@ export default class GitHub extends React.Component {
       />);
     }
 
+    var loader = "";
+    if(elements.length == 0) {
+      loader = <Loader />;
+    }
+
     return (
       <div className="content">
         <h3>GitHub Repositories</h3>
+        {loader}
         <div className="codeSnippetWrapper">
           {elements}
         </div>
