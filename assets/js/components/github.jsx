@@ -43,7 +43,7 @@ export default class GitHub extends React.Component {
   }
 
   componentDidMount() {
-    fetch(`http://localhost:5000/api/v1/files`)
+    fetch(`http://knox.pro:5151/api/v1/files`)
       .then(result => {
         return result.json();
       })

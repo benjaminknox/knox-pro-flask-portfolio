@@ -7,7 +7,7 @@ export default class Hero extends React.Component {
   }
 
   componentDidMount() {
-    fetch(`http://localhost:5000/api/v1/hero`)
+    fetch(`http://knox.pro:5151/api/v1/hero`)
       .then(result => {
         return result.json();
       })

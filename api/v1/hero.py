@@ -5,6 +5,6 @@ hero_route = Blueprint('hero_route', __name__)
 @hero_route.route('/hero')
 def hero():
     return jsonify({
-        'header':'Knox.pro',
-        'tagLine': 'Web App Development'
+        'header':'Benjamin Knox',
+        'tagLine': 'A Web App Developer'
     })

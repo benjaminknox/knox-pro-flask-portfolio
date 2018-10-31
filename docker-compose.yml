@@ -1,14 +1,15 @@
-version: '3'
+version: '2'
 services:
     flask-react:
       build: .
+      #image: 204.48.20.37:5000/knox-portfolio:1
       command: bash -c "npm start & while [ ! -f webkit-build/manifest.json ] ; do sleep 1 ; echo 'waiting for manifest.json from webkit' ; done ; python -m flask run --host=0.0.0.0"
-      volumes:
-        - .:/home/app-user/app
-        - /home/app-user/app/node_modules
+      #volumes:
+        #- .:/home/app-user/app
+        #- /home/app-user/app/node_modules
       ports:
-        - "5000:5000"
-        - "8080:8080"
+        - "5151:5000"
+        - "8282:8080"
       environment:
         - FLASK_APP=app.py
         - FLASK_DEBUG=1

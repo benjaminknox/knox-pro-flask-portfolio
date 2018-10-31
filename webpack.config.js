@@ -5,7 +5,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var node_modules = './node_modules',
     rootAssetPath = './assets',
-    assetServer = "http://localhost:8080/",
+    assetServer = "http://knox.pro:8282/",
     extractSASS = new ExtractTextPlugin('[name].[chunkhash].css');
 
 module.exports = {
@@ -55,6 +55,7 @@ module.exports = {
   devServer: {
     contentBase: './webkit-build',
     host: '0.0.0.0',
+    public: 'knox.pro',
     headers: {
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "GET",
