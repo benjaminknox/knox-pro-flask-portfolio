@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <title>Loading Screen</title>
+    <style>
+      .red { color: red; }
+      .hide { display: none; }
+    </style>
+  </head>
+  <body>
+     <a class="download-file" href="/test.csv" download="test.csv">Click to Download</a>
+     <span class="loading-indicator hide">Loading...</span>
+     <script
+       src="https://code.jquery.com/jquery-3.3.1.min.js"
+       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+       crossorigin="anonymous"></script>
+<script> 
+
+function showLoadingBar() {
+  $(".loading-indicator").toggleClass("red");
+}
+
+$(function() {
+  $(".download-file").on("click", function(e) {
+    e.preventDefault();
+
+    $('.loading-indicator').removeClass('hide');
+
+    var loadingInterval = setInterval(showLoadingBar, 1000);
+
+    var $a = $(this);
+    var href = $a.attr("href");
+    var name = $a.attr("download");
+
+    $.ajax({url: href, xhrFields: {responseType: 'blob'}}).done(function(data) {
+      var a = document.createElement('a');
+      var url = window.URL.createObjectURL(data);
+
+      a.href = url;
+      a.download = name;
+      a.click();
+
+      window.URL.revokeObjectURL(url);
+
+      $('.loading-indicator').addClass('hide');
+      clearInterval(loadingInterval);
+    });
+  });
+});
+
+
+</script>
+  </body>
+</html>
+dy>
+     <a class="download-file" href="/test.csv" download="test.csv">Click to Download</a>
+     <span class="loading-indicator hide">Loading...</span>
+     <script
+       src="https://code.jquery.com/jquery-3.3.1.min.js"
+       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+       crossorigin="anonymous"></script>
+<script> 
+
+function showLoadingBar() {
+  $(".loading-indicator").toggleClass("red");
+}
+
+$(function() {
+  $(".download-file").on("click", function(e) {
+    e.preventDefault();
+
+    $('.loading-indicator').removeClass('hide');
+
+    var loadingInterval = setInterval(showLoadingBar, 1000);
+
+    var $a = $(this);
+    var href = $a.attr("href");
+    var name = $a.attr("download");
+
+    $.ajax({url: href, xhrFields: {responseType: 'blob'}}).done(function(data) {
+      var a = document.createElement('a');
+      var url = window.URL.createObjectURL(data);
+
+      a.href = url;
+      a.download = name;
+      a.click();
+
+      window.URL.revokeObjectURL(url);
+
+      $('.loading-indicator').addClass('hide');
+      clearInterval(loadingInterval);
+    });
+  });
+});
+
+
+</script>
+  </body>
