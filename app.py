@@ -4,7 +4,7 @@ from flask_dotenv import DotEnv
 
 from api.v1.hero import hero_route
 from api.v1.github import github_route
-from api.v1.linkedin import linkedin_route
+from api.v1.portfolio import portfolio_route
 
 
 app = Flask(__name__)
@@ -29,4 +29,4 @@ def home(section="top"):
 # Register REST API routes
 app.register_blueprint(hero_route, url_prefix=apiRoute)
 app.register_blueprint(github_route, url_prefix=apiRoute)
-app.register_blueprint(linkedin_route, url_prefix=apiRoute)
+app.register_blueprint(portfolio_route, url_prefix=apiRoute)
